@@ -170,7 +170,6 @@ const firstPlaces = academias.slice(0, 3);
   const span = document.getElementById("userVoted");
 
   form?.addEventListener("submit", async (e) => {
-    e.preventDefault();
     const academia = document.querySelector(
       'input[name="academiaId"]:checked'
     ) as HTMLInputElement;
