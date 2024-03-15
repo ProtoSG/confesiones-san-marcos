@@ -195,6 +195,7 @@ const firstPlaces = academias.slice(0, 3);
     if (user && !userVoted) {
       updateVotes(academiaId, parseInt(academiaVotes));
       saveUser(user?.uid, true);
+      dialog.close();
     }
   });
 
