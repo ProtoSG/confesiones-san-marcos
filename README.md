@@ -1,54 +1,24 @@
-# Astro Starter Kit: Basics
+# Confesiones San Macos
 
-```sh
-npm create astro@latest -- --template basics
-```
+![logo_san_marocs](./src/assets/logo.webp)(width=20 height=20)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Descripción
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Bienvenido a Confesiones San Macos, el Canal #1 de la Universidad Mayor de San Marcos. Aquí encontrarás entrevistas a preuniversitarios y universitarios de todas las universidades del Perú. Nuestro objetivo es proporcionar un espacio para compartir experiencias, conocimientos y conectar a la comunidad estudiantil.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Redes Sociales
 
-## 🚀 Project Structure
+¡Conéctate con nosotros en nuestras redes sociales para estar al tanto de todas nuestras novedades!
 
-Inside of your Astro project, you'll see the following folders and files:
+- [Youtube](https://www.youtube.com/@confesionessanmarcos)
+- [Instagram](https://www.instagram.com/confesiones_sanmarcos__/)
+- [Discrod](discord.gg/PhPnhN2C)
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Contenido
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- **Noticias**: Mantente informado sobre las últimas novedades en el mundo estudiantil.
+- **Academias**: Descubre recursos educativos y consejos para tu desarrollo académico.
+- **Sorteo**: Participa en nuestros sorteos y gana increíbles premios.
+- **Sobre**: Nosotros: Conoce más sobre nuestro equipo y nuestra misión.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+¡Únete a nuestra comunidad y forma parte de la experiencia de Confesiones San Macos!
