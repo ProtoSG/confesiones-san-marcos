@@ -1,11 +1,40 @@
-<header class="mt-16 hidden lg:block fixed z-10">
-  <nav class="flex gap-14 text-2xl px-10 py-4 rounded-full transition-all">
+---
+import MenuIcon from "./icons/MenuIcon.astro";
+import CloseIcon from "./icons/CloseIcon.astro";
+---
+
+<header class="mt-16 flex justify-end w-full lg:block fixed z-10 max-w-[810px]">
+  <nav
+    class="hidden gap-14 text-2xl px-10 lg:flex py-4 rounded-full transition-all"
+  >
     <a href="#">Inicio</a>
     <a href="#noticias">Noticias</a>
     <a href="#academias">Academias</a>
     <a href="#sorteo">Sorteos</a>
     <a href="#sobre-nosotros">Sobre Nosotros</a>
   </nav>
+  <span id="menuItem" class="lg:hidden text-white/90 -mt-4 mr-4 cursor-pointer"
+    ><MenuIcon class="size-9" /></span
+  >
+  <div id="menu-nav" class="hidden fixed bg-black/80 inset-0 z-10">
+    <div class="flex w-full justify-end h-full">
+      <nav
+        class="relative bg-dark w-4/5 lg:w-[400px] h-full flex flex-col gap-6 text-2xl py-16 pl-6"
+      >
+        <span
+          id="close-menu-item"
+          class="absolute right-4 top-4 cursor-pointer hover:text-primary/70 transition-all"
+        >
+          <CloseIcon class="size-8" />
+        </span>
+        <a href="#">Inicio</a>
+        <a href="#noticias">Noticias</a>
+        <a href="#academias">Academias</a>
+        <a href="#sorteo">Sorteos</a>
+        <a href="#sobre-nosotros">Sobre Nosotros</a>
+      </nav>
+    </div>
+  </div>
 </header>
 
 <style>
@@ -23,5 +52,24 @@
     } else {
       nav?.classList.add("bg-[#191818]");
     }
+  });
+
+  const menuItem = document.getElementById("menuItem");
+  const menuNav = document.getElementById("menu-nav");
+  const closeMenuItem = document.getElementById("close-menu-item");
+  const link = document.querySelectorAll("a");
+
+  menuItem?.addEventListener("click", () => {
+    menuNav?.classList.toggle("hidden");
+  });
+
+  closeMenuItem?.addEventListener("click", () => {
+    menuNav?.classList.toggle("hidden");
+  });
+
+  link?.forEach((a) => {
+    a.addEventListener("click", () => {
+      menuNav?.classList.toggle("hidden");
+    });
   });
 </script>
