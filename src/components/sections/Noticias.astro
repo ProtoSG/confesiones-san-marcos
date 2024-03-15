@@ -1,0 +1,62 @@
+---
+import LinkLogo from "../icons/LinkLogo.astro";
+import NewsLogo from "../icons/NewsLogo.astro";
+import SubTitle from "../SubTitle.astro";
+
+const news = [
+  {
+    image:
+      "https://i.ytimg.com/an_webp/cBw-a_mUcyg/mqdefault_6s.webp?du=3000&sqp=CNDRxq8G&rs=AOn4CLD2K-87D9ypb4v0lpnCGKqeHM5xfQ",
+    title: "Último Video",
+    description:
+      "Fuimos a la bienvenida de cachimbas de la UNI a realizarle preguntas a los ingresantes y sus familiares 🤯😱",
+    link: "https://www.youtube.com/watch?v=cBw-a_mUcyg",
+  },
+  {
+    image:
+      "https://i.ytimg.com/vi/YLQ5e4U8NB0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCZTHiQ3IKaXY0PxLwjZdw1f8TlEg",
+    title: "MADRE SACRIFICA TODO PARA QUE SU HIJO INGRESE A LA UNI",
+    description:
+      "Dicen que una madre deja de lado muchas cosas para que sus hijos sean profesionales. Es lo que nos contaba la madre de un cachimbo UNI en la última bienvenida de cachimbos",
+    link: "https://www.youtube.com/watch?v=YLQ5e4U8NB0",
+  },
+  {
+    image:
+      "https://yt3.ggpht.com/mKF0fwZhXp_YX3-nnC53H1AFAWiEaWNCXPEqTxi06bzekLvSufoF-kF4Hb2KGj6aNCq_uv-F5aZm=s800-c-fcrop64=1,00000000ffffffff-nd-v1",
+    title: "Seminario de Letras",
+    description:
+      "Últimas 5 vacantes para el seminario 🙌 Rcuerda que sortearemos entre los inscritos un reflamento de examen de admisión de san marcos.",
+    link: "https://www.instagram.com/confesiones..",
+  },
+];
+---
+
+<section id="noticias">
+  <SubTitle>
+    <NewsLogo class="size-9" /> Noticias
+  </SubTitle>
+  {
+    news.map((item) => (
+      <article class="w-full bg-white/20 rounded-3xl my-8  grid grid-cols-5 min-h-60">
+        <img
+          src={item.image}
+          alt={item.title}
+          class="col-span-2 object-cover bg-blue-300 size-full rounded-l-3xl"
+        />
+        <div class="col-span-3 px-7 py-6 flex flex-col justify-between">
+          <h3 class="font-semibold text-lg">{item.title}</h3>
+          <p class="my-5 text-">{item.description}</p>
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-semibold  flex gap-2 hover:text-secundary/70 transition-all"
+          >
+            Ver más
+            <LinkLogo />
+          </a>
+        </div>
+      </article>
+    ))
+  }
+</section>

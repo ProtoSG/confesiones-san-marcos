@@ -1,0 +1,27 @@
+<header class="mt-16 hidden lg:block fixed z-10">
+  <nav class="flex gap-14 text-2xl px-10 py-4 rounded-full transition-all">
+    <a href="#">Inicio</a>
+    <a href="#noticias">Noticias</a>
+    <a href="#academias">Academias</a>
+    <a href="#sorteo">Sorteos</a>
+    <a href="#sobre-nosotros">Sobre Nosotros</a>
+  </nav>
+</header>
+
+<style>
+  a:hover {
+    color: #f9f25e;
+  }
+</style>
+
+<script>
+  window.addEventListener("scroll", () => {
+    const nav = document.querySelector("nav");
+
+    if (window.scrollY === 0) {
+      nav?.classList.remove("bg-[#191818]");
+    } else {
+      nav?.classList.add("bg-[#191818]");
+    }
+  });
+</script>

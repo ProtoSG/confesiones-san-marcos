@@ -1,0 +1,94 @@
+---
+import InstagramLogo from "../InstagramLogo.astro";
+import SocialPill from "../SocialPill.astro";
+import SubTitle from "../SubTitle.astro";
+import YoutubeLogo from "../YoutubeLogo.astro";
+import SorteoIcon from "../icons/SorteoIcon.astro";
+
+const sorteo = {
+  image:
+    "https://yt3.ggpht.com/WRN-bepc-m5EId2Tmrj7IbbFVYvylsR-S5zNMMvdKVINHAxn6G0lwX0gPx4UQRiTwTIzvSy0qGZ9=s800-c-fcrop64=1,00000000ffffffff-nd-v1",
+  title: "Seminario de Letras",
+  datos: ["11 de Febrero", "S/ 15 so", "8:00 pm"],
+  description:
+    "Estamos realizando un sorteo de 1 reglamento de Examen de Admisión de San Marcos entre todos los inscritos a nuestro seminario de letras",
+  link: "https://www.youtube.com/watch?v=0PYWcmoqpZA&t=1187s",
+};
+
+const ganadores = [
+  {
+    image:
+      "https://yt4.ggpht.com/6U8tHcaX4AUUAB5GhlaH-Pxym0pAvP8gsKH020fn3PCh4kBtnH3vxcNiJ9ebjxg5UAUs-xe7NA=s32-c-k-c0x00ffffff-no-rj",
+    name: "Anne",
+  },
+  {
+    image:
+      "https://yt4.ggpht.com/6U8tHcaX4AUUAB5GhlaH-Pxym0pAvP8gsKH020fn3PCh4kBtnH3vxcNiJ9ebjxg5UAUs-xe7NA=s32-c-k-c0x00ffffff-no-rj",
+    name: "Anne",
+  },
+  {
+    image:
+      "https://yt4.ggpht.com/6U8tHcaX4AUUAB5GhlaH-Pxym0pAvP8gsKH020fn3PCh4kBtnH3vxcNiJ9ebjxg5UAUs-xe7NA=s32-c-k-c0x00ffffff-no-rj",
+    name: "Anne",
+  },
+];
+---
+
+<section id="sorteo" class="flex flex-col gap-12">
+  <SubTitle><SorteoIcon class="size-9" /> Sorteo</SubTitle>
+  <article class="w-fullrounded-3xl lg:min-h-64 lg:grid lg:grid-cols-5">
+    {
+      (
+        <>
+          <div class="h-64 col-span-2">
+            <img
+              src={sorteo.image}
+              alt={sorteo.title}
+              class="object-cover object-top rounded-3xl size-full"
+            />
+          </div>
+
+          <div class="gap-4 col-span-3 px-2 lg:px-6 py-2 flex flex-col justify-between h-64">
+            <h3 class="uppercase font-semibold  text-xl mt-4 lg:mt-1">
+              {sorteo.title}
+            </h3>
+            <div class="flex flex-wrap gap-2  ">
+              {sorteo.datos.map((data) => (
+                <span class="bg-dark px-4 py-2 rounded-3xl border-[1px] border-secundary/60">
+                  {data}
+                </span>
+              ))}
+            </div>
+            <p class="text-lg lg:text-sm">{sorteo.description}</p>
+
+            <ul class="flex gap-4">
+              <SocialPill>
+                <YoutubeLogo class="size-9" />
+              </SocialPill>
+              <SocialPill href={sorteo.link}>
+                <InstagramLogo class="size-9" />
+              </SocialPill>
+            </ul>
+          </div>
+        </>
+      )
+    }
+  </article>
+  <section class="">
+    <h4 class="text-3xl">Ganadores del Sorteo</h4>
+    <div class="flex my-12 justify-center gap-24 flex-wrap">
+      {
+        ganadores.map((ganador) => (
+          <div class="flex items-center gap-4">
+            <img
+              src={ganador.image}
+              alt={ganador.name}
+              class="w-16 h-16 rounded-full"
+            />
+            <p class="text-2xl">{ganador.name}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</section>

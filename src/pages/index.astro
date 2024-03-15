@@ -1,0 +1,53 @@
+---
+import logo from "../assets/logo.webp";
+import Badge from "../components/Badge.astro";
+import DiscordLogo from "../components/DiscordLogo.astro";
+import InstagramLogo from "../components/InstagramLogo.astro";
+import SocialPill from "../components/SocialPill.astro";
+import YoutubeLogo from "../components/YoutubeLogo.astro";
+import Academias from "../components/sections/Academias.astro";
+import Noticias from "../components/sections/Noticias.astro";
+import SobreNosotros from "../components/sections/SobreNosotros.astro";
+import Sorteo from "../components/sections/Sorteo.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="max-w-[780px] px-4 pb-24 text-white/90">
+    <section class="w-full mx-auto pt-20 lg:pt-64">
+      <div class="flex gap-8">
+        <img class="rounded-full size-24" src={logo.src} alt="logo del canal" />
+        <div class="flex items-center">
+          <Badge>Canal #1 de San Marcos</Badge>
+        </div>
+      </div>
+      <h1 class="text-5xl my-10 font-bold text-balance">
+        Confesiones <span class="text-primary text-6xl lg:text-5xl"
+          >San Marcos</span
+        >
+      </h1>
+      <h2 class="text-2xl">
+        Canal donde encontrarás entrevistas a pre universitarios y
+        universitarios de todas las <span class="text-secundary"
+          >universidades del Perú</span
+        >.
+      </h2>
+
+      <ul class="flex gap-8 my-8">
+        <SocialPill href="https://www.youtube.com/@confesionessanmarcos">
+          <YoutubeLogo class="size-9" />
+        </SocialPill>
+        <SocialPill href="https://www.instagram.com/confesiones_sanmarcos__/">
+          <InstagramLogo class="size-9" />
+        </SocialPill>
+        <SocialPill href="https://discord.com/invite/PhPnhN2C">
+          <DiscordLogo class="size-9" />
+        </SocialPill>
+      </ul>
+    </section>
+    <Noticias />
+    <Academias />
+    <Sorteo />
+    <SobreNosotros />
+  </main>
+</Layout>

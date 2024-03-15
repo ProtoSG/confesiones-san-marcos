@@ -1,0 +1,88 @@
+---
+import Erick from "../../assets/erick.webp";
+import Nicole from "../../assets/nicole.webp";
+import Pelao from "../../assets/pelao.webp";
+import DiscordLogo from "../DiscordLogo.astro";
+import InstagramLogo from "../InstagramLogo.astro";
+import SocialPill from "../SocialPill.astro";
+import SubTitle from "../SubTitle.astro";
+import YoutubeLogo from "../YoutubeLogo.astro";
+import SobreNosotrosIcon from "../icons/SobreNosotrosIcon.astro";
+
+const trio = [
+  {
+    image: Pelao,
+    name: "El Tio Confe",
+    nickname: "(El Pelao)",
+    desciption:
+      "El Tío Confe, reconocido como la voz en off más distinguida del canal y fundador, es un egresado destacado de la Universidad Nacional Mayor de San Marcos (UNMSM), donde obtuvo su título en contabilidad.",
+    social: {
+      instagram: "https://www.instagram.com/tioconfe_",
+      youtube: "https://www.youtube.com/@eltioconfe",
+      discord: "https://discord.gg/DaD59XDRHY",
+    },
+  },
+  {
+    image: Erick,
+    name: "Erick Flores",
+    nickname: "(El Comediante)",
+    desciption:
+      "Erick Flores, la cara distintiva del canal, es un egresado destacado de la Universidad Nacional Mayor de San Marcos (UNMSM), donde se graduó en la carrera de ayuda social. Su profundo compromiso con el servicio comunitario y su pasión por el cambio social han sido pilares en la formación de nuestra comunidad en línea.",
+    social: {
+      instagram: "https://www.instagram.com/erick.flores0",
+      youtube: "https://www.youtube.com/@Erick_flores",
+      discord: "https://discord.com/invite/tTcjAQuw",
+    },
+  },
+  {
+    image: Nicole,
+    name: "Nicole",
+    nickname: "(Pan con Lechecita)",
+    desciption:
+      "Nicole, editora del canal, es una apasionada graduada de psicología de la Universidad Peruana de Ciencias Aplicadas (UPC) con una profunda comprensión de la mente humana y la interacción social. Su habilidad para comunicar ideas complejas de manera accesible ha enriquecido el contenido del canal, especialmente en temas relacionados con la Universidad Nacional Mayor de San Marcos",
+    social: {
+      instagram: "https://www.instagram.com/nicsdefresa/",
+      youtube: "https://www.youtube.com/@confesionessanmarcos",
+      discord: "",
+    },
+  },
+];
+---
+
+<section id="sobre-nosotros">
+  <SubTitle> <SobreNosotrosIcon class="size-9" /> Sobre Nosotros </SubTitle>
+  {
+    trio.map((person) => (
+      <div class=" gap-16 mt-20 flex flex-col items-center justify-center md:flex-row">
+        <img
+          src={person.image.src}
+          alt={person.name}
+          class="rounded-full size-52 "
+        />
+        <article>
+          <header class="flex items-center text-2xl gap-2">
+            <h3 class="text-primary">{person.name}</h3>
+            <span>{person.nickname}</span>
+          </header>
+          <body>
+            <p class="text-lg my-8">{person.desciption}</p>
+          </body>
+
+          <footer>
+            <ul class="flex gap-6">
+              <SocialPill href={person.social.instagram}>
+                <InstagramLogo class="size-9" />
+              </SocialPill>
+              <SocialPill href={person.social.youtube}>
+                <YoutubeLogo class="size-9" />
+              </SocialPill>
+              <SocialPill href={person.social.discord}>
+                <DiscordLogo class="size-9" />
+              </SocialPill>
+            </ul>
+          </footer>
+        </article>
+      </div>
+    ))
+  }
+</section>
