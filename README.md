@@ -1,6 +1,6 @@
 # Confesiones San Macos
 
-![logo_san_marocs](./src/assets/logo.webp)(width=20 height=20)
+![logo_san_marocs](./src/assets/logo.webp)
 
 ## Descripción
 
